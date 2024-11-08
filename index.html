@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puissance4</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div onclick="startGame()" id="start" class="start">
+            <img src="./assets/images/start.png" alt="start">
+        </div>
+        <div id="choise" class="hidden">
+            <h2>Choisissez votre Adversaire</h2>
+            <img onclick="choiseAdversaire(1)" src="./assets/images/pvp.png" alt="pvp">
+            <img onclick="choiseAdversaire(2)" src="/assets/images/pvIA.png" alt="pvIA">
+        </div>
+        <div id="faction" class="hidden">
+            <h2>Choisissez votre Faction</h2>
+        </div>
+        <div id="game" class="hidden"></div>
+        <div id="restart" class="hidden">
+            <button onclick="restartGame()">RESTART</button>
+        </div>
+        <div id="winner" class="hidden"></div>
+        <div id="nul" class="hidden"></div>
+    </main>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
