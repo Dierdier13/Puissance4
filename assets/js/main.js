@@ -1,6 +1,9 @@
 const startContainer = document.querySelector("#start");
 const choiseContainer = document.getElementById("choise");
 const factionContainer = document.getElementById("faction");
+const gameZoneContainer = document.getElementById("gameZone");
+const playerOneContainer = document.getElementById("playerOne");
+const playerTwoContainer = document.getElementById("playerTwo");
 const gameContainer = document.getElementById("game");
 const restartContainer = document.getElementById("restart");
 const winnerContainer = document.getElementById("winner");
@@ -67,8 +70,10 @@ ally.src = "./assets/images/ally.png";
 factionContainer.appendChild(ally);
 ally.addEventListener("click", () => {
     factionContainer.classList.add("hidden");
-    gameContainer.classList.remove("hidden");
+    gameZoneContainer.classList.remove("hidden");
     restartContainer.classList.remove("hidden");
+    playerOneContainer.appendChild(ally);
+    playerTwoContainer.appendChild(horde);
     createDimension();
     audio.pause();
     audioA.play();
@@ -80,8 +85,10 @@ horde.src = "./assets/images/horde.png";
 factionContainer.appendChild(horde);
 horde.addEventListener("click", () => {
     factionContainer.classList.add("hidden");
-    gameContainer.classList.remove("hidden");
+    gameZoneContainer.classList.remove("hidden");
     restartContainer.classList.remove("hidden");
+    playerOneContainer.appendChild(horde);
+    playerTwoContainer.appendChild(ally);
     createDimension();
     audio.pause();
     audioH.play();
@@ -93,7 +100,7 @@ horde.addEventListener("click", () => {
 function restartGame() {
     startContainer.classList.remove("hidden");
     restartContainer.classList.add("hidden");
-    gameContainer.classList.add("hidden");
+    gameZoneContainer.classList.add("hidden");
     winnerContainer.classList.add("hidden");
     nulContainer.classList.add("hidden");
     tour = 1;
@@ -211,7 +218,8 @@ function iaPlay() {
     if (possibleChoise.length > 0) {
         const move = possibleChoise[random(0, possibleChoise.length - 1)];
         grid[0][move.j] = currentPlayer;
-        checkWin(grid);
+        moveDownPion()
+        checkWin(grid)
         tour++;
         tourParTour();
         createDimension();
@@ -253,10 +261,24 @@ function checkWin(grid) {
 //////////////////////////// Afficher le gagnant /////////////////////////
 
 function displayWinner(player) {
-    const factionName = (player === 1) === isAlly ? "L'Alliance" : "La Horde";
-    winnerContainer.classList.remove("hidden");
-    winnerContainer.textContent = factionName + " a gagné !";
-    gameContainer.classList.add("hidden");
+    if (player === 1) {
+        if (isAlly) {
+            winnerContainer.classList.remove("hidden");
+            winnerContainer.innerHTML = "<img src='./assets/images/ally.png' alt='gagnant'> L'Alliance a gagné !";
+        } else {
+            winnerContainer.classList.remove("hidden");
+            winnerContainer.innerHTML = "<img src='./assets/images/horde.png' alt='gagnant'> La Horde a gagné !";
+        }
+    } else {
+        if (isAlly) {
+            winnerContainer.classList.remove("hidden");
+            winnerContainer.innerHTML = "<img src='./assets/images/horde.png' alt='gagnant'> La Horde a gagné !";
+        } else {
+            winnerContainer.classList.remove("hidden");
+            winnerContainer.innerHTML = "<img src='./assets/images/ally.png' alt='gagnant'> L'Alliance a gagné !";
+        }
+    }
+    gameZoneContainer.classList.add("hidden");
 }
 
 //////////////////////////// Afficher match nul /////////////////////////
@@ -264,7 +286,7 @@ function displayWinner(player) {
 function displayDraw() {
     nulContainer.classList.remove("hidden");
     nulContainer.textContent = "Match nul !";
-    gameContainer.classList.add("hidden");
+    gameZoneContainer.classList.add("hidden");
 }
 
 //////////////////////////////// Fonction randaom ////////////////////

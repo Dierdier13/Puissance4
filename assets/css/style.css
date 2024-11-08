@@ -35,6 +35,15 @@ button {
     background: rgba(255, 255, 255, 0.5);
 }
 
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'LifeCraft';
+}
+
+
+
 #start {
     cursor: pointer;
     position: fixed;
@@ -48,44 +57,35 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    h2 {
-        text-align: center;
-        color: white;
-        font-size: 50px;
-        font-family: 'LifeCraft';
-    }
-
     img {
         margin: 20px;
         cursor: pointer;
-
+    
     }
-
 }
 
-#faction{
+#faction {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    h2 {
-        text-align: center;
-        color: white;
-        font-size: 50px;
-        font-family: 'LifeCraft';
-    }
-
-    img {
-        margin: 20px;
-        cursor: pointer;
-
-    }
-
 }
 
 /* ************************* GAME **************** */
+
+
+#playerOne{
+    position: fixed;
+    top: 55%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+}
+#playerTwo{
+    position: fixed;
+    top: 55%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
 
 #game {
     display: flex;
@@ -139,7 +139,7 @@ button {
     background: rgba(255, 255, 255, 0.5);
 }
 
-#restart button{
+#restart button {
     position: fixed;
     top: 88%;
     left: 50%;
