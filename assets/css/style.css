@@ -25,25 +25,6 @@ body {
     height: 100vh;
 }
 
-button {
-    cursor: pointer;
-    color: white;
-    font-size: 80px;
-    padding: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.5);
-}
-
-h2 {
-    text-align: center;
-    color: white;
-    font-size: 50px;
-    font-family: 'LifeCraft';
-}
-
-
-
 #start {
     cursor: pointer;
     position: fixed;
@@ -57,98 +38,18 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    h2 {
+        text-align: center;
+        color: white;
+        font-size: 50px;
+        font-family: 'LifeCraft';
+    }
+
     img {
         margin: 20px;
         cursor: pointer;
-    
+
     }
-}
 
-#faction {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* ************************* GAME **************** */
-
-
-#playerOne{
-    position: fixed;
-    top: 55%;
-    left: 85%;
-    transform: translate(-50%, -50%);
-}
-#playerTwo{
-    position: fixed;
-    top: 55%;
-    left: 15%;
-    transform: translate(-50%, -50%);
-}
-
-#game {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    height: 630px;
-    width: 730px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.5);
-    position: fixed;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    div {
-        cursor: pointer;
-        height: 100px;
-        width: 100px;
-        border: 2px solid rgba(255, 255, 255, 0.5);
-        border-radius: 25px;
-    }
-}
-
-#winner {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'LifeCraft';
-    color: white;
-    font-size: 80px;
-    padding: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.5);
-}
-
-#nul {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'LifeCraft';
-    color: white;
-    font-size: 80px;
-    padding: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.5);
-}
-
-#restart button {
-    position: fixed;
-    top: 88%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'LifeCraft';
-    color: white;
-    font-size: 80px;
-    padding: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.5);
 }

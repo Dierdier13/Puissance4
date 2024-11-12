@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puissance4</title>
+    <link rel="stylesheet" href="../assets/css/style-puissance.css">
+</head>
+
+<body>
+    <header>
+        <div onclick="startGame()" id="start" class="start">
+            <a href="../index.html"><img src="../assets/images/start.png" alt="start"></a>
+        </div>
+    </header>
+    <main>
+        <div id="choise">
+            <h2>Choisissez votre Adversaire</h2>
+            <img onclick="choiseAdversaire(1)" src="../assets/images/pvp.png" alt="pvp">
+            <img onclick="choiseAdversaire(2)" src="../assets/images/pvIA.png" alt="pvIA">
+        </div>
+        <div id="faction" class="hidden">
+            <h2>Choisissez votre Faction</h2>
+            <img onclick="ally()" src="../assets/images/ally.png" alt="ally">
+            <img onclick="horde()" src="../assets/images/horde.png" alt="horde">
+        </div>
+        <section id="gameZone" class="hidden">
+            <div id="playerOne"><h2>Playeur 1</h2></div>
+            <div id="game"></div>
+            <div id="playerTwo"><h2>Playeur 2</h2></div>
+        </section>
+        <div id="restart" class="hidden">
+            <button onclick="restartGame()">RESTART</button>
+        </div>
+        <div id="winner" class="hidden"></div>
+        <div id="nul" class="hidden"></div>
+    </main>
+
+    <script src="../assets/js/puissance.js"></script>
+</body>
+
+</html>
