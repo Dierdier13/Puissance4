@@ -28,9 +28,14 @@ body {
 #start {
     cursor: pointer;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 40%;
+    transform: scale(1), translate(-50%, -50%);
+    transition: 0.3s ease;
+}
+
+#start:hover{
+    transform: scale(1.2)
 }
 
 #choise {
@@ -39,17 +44,10 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    h2 {
-        text-align: center;
-        color: white;
-        font-size: 50px;
-        font-family: 'LifeCraft';
-    }
-
-    img {
+    a {
         margin: 20px;
         cursor: pointer;
-
+        border-radius: 20px;
     }
 
 }

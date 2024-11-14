@@ -16,22 +16,30 @@
     </header>
     <main>
         <div id="choise">
-            <h2>Choisissez votre Adversaire</h2>
-            <img onclick="choiseAdversaire(1)" src="../assets/images/pvp.png" alt="pvp">
-            <img onclick="choiseAdversaire(2)" src="../assets/images/pvIA.png" alt="pvIA">
+            <img src="../assets/images/adversaire.png" alt="adversaire">
+            <div>
+                <img onclick="choiseAdversaire(1)" src="../assets/images/pvp.png" alt="pvp">
+                <img onclick="choiseAdversaire(2)" src="../assets/images/pvIA.png" alt="pvIA">
+            </div>
         </div>
         <div id="faction" class="hidden">
-            <h2>Choisissez votre Faction</h2>
-            <img onclick="ally()" src="../assets/images/ally.png" alt="ally">
-            <img onclick="horde()" src="../assets/images/horde.png" alt="horde">
+            <img src="../assets/images/faction.png" alt="faction">
+            <div>
+                <img onclick="ally()" src="../assets/images/ally.png" alt="ally">
+                <img onclick="horde()" src="../assets/images/horde.png" alt="horde">
+            </div>
         </div>
         <section id="gameZone" class="hidden">
-            <div id="playerOne"><h2>Playeur 1</h2></div>
+            <div id="playerOne">
+                <img src="../assets/images/Player1.png" alt="player1">
+            </div>
             <div id="game"></div>
-            <div id="playerTwo"><h2>Playeur 2</h2></div>
+            <div id="playerTwo">
+                <img src="../assets/images/Player2.png" alt="player2">
+            </div>
         </section>
         <div id="restart" class="hidden">
-            <button onclick="restartGame()">RESTART</button>
+            <img onclick="restartGame()" src="../assets/images/restart.gif" alt="restart">
         </div>
         <div id="winner" class="hidden"></div>
         <div id="nul" class="hidden"></div>
